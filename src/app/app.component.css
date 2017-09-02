@@ -1,0 +1,32 @@
+nav{
+  background-color: #333;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+nav a{
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  font-family: Helvetica,Arial,Lucida Grande,sans-serif;;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 16px;
+  display: block;
+  float: left;
+}
+
+nav a:visited{
+  color: white;
+}
+
+nav a:hover {
+  background-color: #EEE;
+  color: #333333;
+}
+
+nav a:first-child:hover{
+  background-color:#333;
+  color: #fff;
+}

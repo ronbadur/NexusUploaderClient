@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>#</th>
+    <th>Uploader Id</th>
+    <th>File Name</th>
+    <th>Date</th>
+  </tr>
+  <tr *ngFor="let upload of uploads">
+    <td> <span class="id">{{upload.id}} </span> </td>
+    <td>{{upload.uploaderId}}</td>
+    <td>{{upload.fileName}}</td>
+    <td>{{upload.date}}</td>
+  </tr>
+</table>
