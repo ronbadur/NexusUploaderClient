@@ -1,5 +1,7 @@
-<form action="upload.php" method="POST">
-<input type="file" multiple>
-<p>Drag your file here or click in this area.</p>
-<button type="submit">Upload</button>
-</form>
+<div>
+  <form (ngSubmit)="onSubmit()">
+    <input type="file" #file (change)="onChange(file.files)">
+    <p>{{inputText}}</p>
+    <button type="submit">Upload</button>
+  </form>
+</div>

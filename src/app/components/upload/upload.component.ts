@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
 
 @Component({
   selector: 'app-upload',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./upload.component.css']
 })
 export class UploadComponent {
-  title = 'app';
+  fileToUpload: File;
+  inputText: string;
+
+  constructor() {
+    this.inputText = 'Drag your file here or click in this area.';
+  }
+
+  onChange(files: FileList) {
+    this.fileToUpload = files[0];
+    this.inputText = this.fileToUpload.name;
+  }
+
+  onSubmit() {
+    console.log('Submit');
+  }
 }
