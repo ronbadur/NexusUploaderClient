@@ -1,10 +1,16 @@
-<div class="navigation-bar">
-  <nav>
-    <a routerLink="/upload"><span style="color: lightseagreen">Nexus</span><span style="color: darkorange">Uploader</span></a>
-    <a routerLink="/upload" routerLinkActive="active">Upload</a>
-    <a routerLink="/uploadsHistory" routerLinkActive="active">Uploads History</a>
-    <a routerLink="/about" routerLinkActive="active">About</a>
-  </nav>
-  <router-outlet></router-outlet>
+<div class="container">
+  <div class="navigation-bar">
+    <nav>
+      <a routerLink="/upload"><span style="color: lightseagreen">Nexus</span><span
+        style="color: darkorange">Uploader</span></a>
+      <a routerLink="/upload" routerLinkActive="active">Upload</a>
+      <a routerLink="/uploadsHistory" routerLinkActive="active">Uploads History</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+    </nav>
+  </div>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
+
 

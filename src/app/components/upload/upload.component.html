@@ -1,7 +1,10 @@
-<div>
+<div class="upload-form">
   <form (ngSubmit)="onSubmit()">
-    <input type="file" #file (change)="onChange(file.files)">
+    <img *ngIf="isFileChosen" src="../../../assets/zip-logo.png" alt="zip logo" width="100px">
     <p>{{inputText}}</p>
+    <input type="file" #file (change)="onChange(file.files)">
     <button type="submit">Upload</button>
   </form>
 </div>
+
+

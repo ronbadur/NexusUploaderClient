@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { NgIf } from '@angular/common';
 
 
 @Component({
@@ -9,6 +10,7 @@ import {Component} from '@angular/core';
 export class UploadComponent {
   fileToUpload: File;
   inputText: string;
+  isFileChosen = false;
 
   constructor() {
     this.inputText = 'Drag your file here or click in this area.';
@@ -17,6 +19,7 @@ export class UploadComponent {
   onChange(files: FileList) {
     this.fileToUpload = files[0];
     this.inputText = this.fileToUpload.name;
+    this.isFileChosen = true;
   }
 
   onSubmit() {

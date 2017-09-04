@@ -23,10 +23,7 @@ const appRoutes: Routes = [
     UploadsHistoryComponent
   ],
   imports: [
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    ),
+    RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
     ReactiveFormsModule
