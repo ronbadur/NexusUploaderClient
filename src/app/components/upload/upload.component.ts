@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
-import { NgIf } from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
+import {UploadValidator} from '../../models/UploadValidator';
 
 
 @Component({
@@ -7,19 +8,28 @@ import { NgIf } from '@angular/common';
   templateUrl: './upload.component.html',
   styleUrls: ['./upload.component.css']
 })
-export class UploadComponent {
+export class UploadComponent implements OnInit {
   fileToUpload: File;
   inputText: string;
   isFileChosen = false;
+  uploadValidator: UploadValidator;
 
   constructor() {
     this.inputText = 'Drag your file here or click in this area.';
   }
 
   onChange(files: FileList) {
-    this.fileToUpload = files[0];
-    this.inputText = this.fileToUpload.name;
-    this.isFileChosen = true;
+    if (this.uploadValidator.validateFileExtension(files[0].name)) {
+      this.fileToUpload = files[0];
+      this.inputText = this.fileToUpload.name;
+      this.isFileChosen = true;
+    } else {
+      alert('Invalid File Extension!');
+    }
+  }
+
+  ngOnInit(): void {
+    this.uploadValidator = new UploadValidator();
   }
 
   onSubmit() {
