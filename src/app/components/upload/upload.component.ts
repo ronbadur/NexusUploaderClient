@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormGroup} from '@angular/forms';
 import {UploadValidator} from '../../models/UploadValidator';
+import {$} from 'protractor';
 
 
 @Component({
@@ -26,6 +27,8 @@ export class UploadComponent implements OnInit {
     } else {
       alert('Invalid File Extension!');
     }
+    const inputElement = <HTMLInputElement>document.getElementById('file');
+    inputElement.value = '';
   }
 
   ngOnInit(): void {

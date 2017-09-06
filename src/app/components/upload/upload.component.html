@@ -2,7 +2,7 @@
   <form novalidate (ngSubmit)="onSubmit()">
     <img *ngIf="isFileChosen" src="../../../assets/zip-logo.png" alt="zip logo" width="100px">
     <p>{{inputText}}</p>
-    <input type="file" #file (change)="onChange(file.files)">
+    <input id="file" type="file" #file (change)="onChange(file.files)">
     <button type="submit">Upload</button>
   </form>
 </div>
