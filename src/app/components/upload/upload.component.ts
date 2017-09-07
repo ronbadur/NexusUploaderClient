@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup} from '@angular/forms';
 import {UploadValidator} from '../../models/UploadValidator';
-import {$} from 'protractor';
 
 
 @Component({

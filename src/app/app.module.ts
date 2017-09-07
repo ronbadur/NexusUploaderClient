@@ -8,11 +8,14 @@ import {AboutComponent} from './components/about/about.component';
 import {UploadsHistoryComponent} from './components/uploads_history/uploads-history.component';
 import {UploadComponent} from './components/upload/upload.component';
 import {UploadsHistoryService} from './services/uploads-history.service';
+import {BuildToolOptionsComponent} from './components/build_tool_options/build-tool-options.component';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'uploadsHistory', component: UploadsHistoryComponent },
-  { path: '**', component: UploadComponent }
+  { path: 'homepage', component: BuildToolOptionsComponent},
+  { path: 'upload', component: UploadComponent },
+  { path: '**', component: BuildToolOptionsComponent}
 ];
 
 @NgModule({
@@ -20,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent,
     AboutComponent,
     UploadComponent,
-    UploadsHistoryComponent
+    UploadsHistoryComponent,
+    BuildToolOptionsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
