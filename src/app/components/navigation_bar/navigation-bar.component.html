@@ -1,0 +1,5 @@
+<nav>
+  <a *ngFor="let link of navigationLinks" routerLink="{{link.path}}" routerLinkActive="active">
+    {{link.name}}
+  </a>
+</nav>

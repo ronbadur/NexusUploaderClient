@@ -9,6 +9,8 @@ import {UploadsHistoryComponent} from './components/uploads_history/uploads-hist
 import {UploadComponent} from './components/upload/upload.component';
 import {UploadsHistoryService} from './services/uploads-history.service';
 import {BuildToolOptionsComponent} from './components/build_tool_options/build-tool-options.component';
+import {NavigatorBarComponent} from "./components/navigation_bar/navigation-bar.component";
+import {NavigationLinksService} from "./services/navigation-links.service";
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
     AboutComponent,
     UploadComponent,
     UploadsHistoryComponent,
-    BuildToolOptionsComponent
+    BuildToolOptionsComponent,
+    NavigatorBarComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -32,7 +35,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [UploadsHistoryService, FormBuilder],
+  providers: [UploadsHistoryService, FormBuilder, NavigationLinksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
